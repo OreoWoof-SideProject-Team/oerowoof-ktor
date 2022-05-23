@@ -55,7 +55,7 @@ fun Route.s3() {
                 s3.getObject(request) { resp ->
                     val byteImg = resp.body?.toByteArray()
                     msg = if (byteImg != null) {
-                        "Successfully read test from oreowoof"
+                        "Successfully read test from oreowoof test"
                     } else {
                         "fail read test from oreowoof"
                     }
