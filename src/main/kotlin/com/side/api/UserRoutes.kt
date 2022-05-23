@@ -5,9 +5,9 @@ import aws.sdk.kotlin.services.s3.S3Client
 import aws.sdk.kotlin.services.s3.model.GetObjectRequest
 import aws.smithy.kotlin.runtime.content.toByteArray
 import com.google.gson.annotations.SerializedName
-import com.oreo.data.DataResponse
-import com.oreo.data.User
-import com.oreo.data.UserEntity
+import com.side.data.DataResponse
+import com.side.data.User
+import com.side.data.UserEntity
 import io.ktor.application.*
 import io.ktor.http.*
 import io.ktor.response.*

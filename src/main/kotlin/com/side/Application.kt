@@ -13,7 +13,7 @@ import io.ktor.routing.*
 import io.ktor.sessions.*
 import io.ktor.util.*
 import io.ktor.websocket.*
-
+import org.jetbrains.exposed.sql.Database
 
 
 fun main(args: Array<String>): Unit = EngineMain.main(args)
@@ -30,6 +30,15 @@ fun Application.module(testing: Boolean = false) {
     install(Sessions) {
         cookie<DeviceSession>("SESSION")
     }
+
+    Database.connect(
+        "jdbc:mysql://aa1ok2whmxr82kn.ccipddwl43fw.ap-southeast-1.rds.amazonaws.com:3306/oreoWoof",
+        driver = "com.mysql.cj.jdbc.Driver",
+        user = "admin",
+        password = "52511101"
+    )
+
+
     /**儲存來自client端的clientId*/
     intercept(ApplicationCallPipeline.Features) {
         if (call.sessions.get<DeviceSession>() == null) {

@@ -1,4 +1,4 @@
-package com.oreo.data
+package com.side.data
 
 import org.jetbrains.exposed.sql.Column
 import org.jetbrains.exposed.sql.ResultRow
