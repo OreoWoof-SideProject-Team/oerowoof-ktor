@@ -1,0 +1,1 @@
+rootProject.name = "com.side.ktor-oerowoof"
