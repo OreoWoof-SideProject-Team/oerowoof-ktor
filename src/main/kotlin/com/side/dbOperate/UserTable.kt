@@ -52,7 +52,8 @@ object UserTable {
             it[phone] = user.phone
             it[token] = user.token
             it[address] = user.address
-            it[createTime] = DateTime.parse(user.createTime.replace("/", "-"), fmt)
+            it[flag] = 0
+            it[createTime] = DateTime()
         } get UserEntity.userId
 
         return@transaction userId

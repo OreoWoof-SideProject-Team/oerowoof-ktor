@@ -57,12 +57,10 @@ fun Application.module(testing: Boolean = false) {
     install(WebSockets)
 
     install(Routing) {
+        test()
         register()
         editProfile()
         login()
-        test()
-        getUser()
-        s3()
     }
 
 
