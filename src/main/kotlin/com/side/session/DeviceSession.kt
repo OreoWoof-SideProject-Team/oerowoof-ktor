@@ -1,4 +1,4 @@
-package com.oreo.session
+package com.side.session
 
 data class DeviceSession(
     val clientId: String,

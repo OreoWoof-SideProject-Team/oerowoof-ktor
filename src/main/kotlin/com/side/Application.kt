@@ -1,10 +1,9 @@
 package com.side
 
 import com.google.gson.Gson
-import com.oreo.session.DeviceSession
-import com.side.api.getUser
-import com.side.api.s3
-import com.side.api.test
+import com.side.api.*
+import com.side.session.DeviceSession
+import com.side.data.User
 import io.ktor.server.netty.*
 import io.ktor.application.*
 import io.ktor.features.*
@@ -58,6 +57,9 @@ fun Application.module(testing: Boolean = false) {
     install(WebSockets)
 
     install(Routing) {
+        register()
+        editProfile()
+        login()
         test()
         getUser()
         s3()
